@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-4.3.1-dist/css/test.css">
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-4.3.1-dist/css/bootstrap.css">
-     <script src="bootstrap-4.3.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
-   
-    
+    <script src="bootstrap-4.3.1-dist/js/test.js"></script>
+
+
 </head>
+
 <body>
-    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Bootstrap Tutorial</h1>
+            <p>Bootstrap is the most popular HTML, CSS...</p>
+        </div>
+    </div>
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 columb">
+
+            <!-- form -->
+
+            <div class="form-group">
+                <label for="usr">enter the radius of the circle</label>
+                <input type="text" class="form-control" id="usr">
+                <button type="button" class="btn btn-primary btn-block" onclick="calculate()">press to calculate the nefah</button>
+                <label for="pwd">the nefah of the circle:</label>
+                <br>
+                <span id="showvolume"></span>
+            </div>
+        </div>
+
+
+
+<!-- screen section -->
+
+        <div class="col-sm-12 col-lg-6 columb">
+<!-- show the circle(canvas): -->
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
