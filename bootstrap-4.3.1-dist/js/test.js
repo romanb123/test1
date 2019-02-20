@@ -6,9 +6,13 @@ var radius=document.getElementById("usr").value;
 // console.log(radius);
 var output=document.getElementById("showvolume");
 // console.log(output);
-
+// check if number is not 2 big:
+if(radius>200){
+    output.innerHTML+=radius+"is 2 big"+"<br>";
+    alert("too big radius"+radius);
+}
 // ***check if valid number**
-if(isNaN(radius)==true){
+else if(isNaN(radius)==true){
 alert('wrongnumber');
 output.innerHTML+=radius+"is not a valid number"+"<br>";
 }
@@ -23,5 +27,12 @@ ctx.beginPath();
 ctx.arc(200,200,radius, 0, 2 * Math.PI);
 ctx.stroke();
 }
-}
+};
 
+// function to clear the canvas
+function clearscreen(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    const context = c.getContext('2d');
+    context.clearRect(0, 0, c.width, c.height);
+};
