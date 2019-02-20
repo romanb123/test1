@@ -7,9 +7,9 @@ var radius=document.getElementById("usr").value;
 var output=document.getElementById("showvolume");
 // console.log(output);
 // check if number is not 2 big:
-if(radius>200){
-    output.innerHTML+=radius+"is 2 big"+"<br>";
-    alert("too big radius"+radius);
+if(radius>200||radius<0){
+    output.innerHTML+=radius+"is 2 big or too small"+"<br>";
+    alert("too big radius or too small"+radius);
 }
 // ***check if valid number**
 else if(isNaN(radius)==true){
